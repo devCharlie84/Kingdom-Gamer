@@ -29,3 +29,6 @@ Robot 3T
 
 Visual Studio Code:
 - [Download](https://code.visualstudio.com)
+
+Yarn: Package manager
+- [Download](https://yarnpkg.com/getting-started)
