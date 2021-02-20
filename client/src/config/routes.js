@@ -3,15 +3,16 @@ import LayoutAdmin from "../layouts/LayoutAdmin";
 import LayoutBasic from "../layouts/LayoutBasic";
 
 // Admin Pages
-import AdminHome from "../pages/Admin";
+import AdminHome from "../pages/Admin/AdminHome";
 import AdminSignIn from "../pages/Admin/SignIn";
 
 //Normal Pages
-import Home from "../pages/Home";
-import Contact from "../pages/Contact";
+import BasicHome from "../pages/Basic/BasicHome";
+import Contact from "../pages/Basic/Contact";
 
 //Other
-import Error404 from "../pages/Error404";
+import Error404Admin from "../pages/Admin/Error404";
+import Error404Basic from "../pages/Basic/Error404";
 
 const routes = [
   {
@@ -30,7 +31,7 @@ const routes = [
         exact: true,
       },
       {
-        component: Error404,
+        component: Error404Admin,
       },
     ],
   },
@@ -41,7 +42,7 @@ const routes = [
     routes: [
       {
         path: "/",
-        component: Home,
+        component: BasicHome,
         exact: true,
       },
       {
@@ -50,7 +51,7 @@ const routes = [
         exact: true,
       },
       {
-        component: Error404,
+        component: Error404Basic,
       },
     ],
   },

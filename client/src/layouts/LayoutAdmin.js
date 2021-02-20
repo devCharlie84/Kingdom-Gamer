@@ -12,7 +12,7 @@ export default function LayoutAdmin(props) {
   const [menuCollapsed, setMenuCollapsed] = useState(false);
   const { Header, Content, Footer } = Layout;
 
-  if (localStorage.getItem("email") && !localStorage.getItem("isLogin")) {
+  if (!localStorage.getItem("user")) {
     return (
       <>
         <Route path="/admin/login" component={AdminSignIn} />
@@ -20,31 +20,27 @@ export default function LayoutAdmin(props) {
       </>
     );
   }
-  if (localStorage.getItem("email") && localStorage.getItem("isLogin")) {
-    return (
-      <Layout>
-        <MenuSider menuCollapsed={menuCollapsed} />
-        <Layout
-          className="layout-admin"
-          style={{ marginLeft: menuCollapsed ? "80px" : "200px" }}
-        >
-          <Header className="layout-admin__header">
-            <MenuTop
-              menuCollapsed={menuCollapsed}
-              setMenuCollapsed={setMenuCollapsed}
-            />
-          </Header>
-          <Content className="layout-admin__content">
-            <LoadRoutes routes={routes} />
-          </Content>
-          <Footer className="layout-admin__footer">
-            Carlos Andrés Morales Lara
-          </Footer>
-        </Layout>
+
+  return (
+    <Layout>
+      <MenuSider menuCollapsed={menuCollapsed} />
+      <Layout
+        className="layout-admin"
+        style={{ marginLeft: menuCollapsed ? "80px" : "200px" }}
+      >
+        <Header className="layout-admin__header">
+          <MenuTop
+            menuCollapsed={menuCollapsed}
+            setMenuCollapsed={setMenuCollapsed}
+          />
+        </Header>
+        <Content className="layout-admin__content">
+          <LoadRoutes routes={routes} />
+        </Content>
+        <Footer className="layout-admin__footer">Kingdom Gamer</Footer>
       </Layout>
-    );
-  }
-  return null;
+    </Layout>
+  );
 }
 
 function LoadRoutes({ routes }) {

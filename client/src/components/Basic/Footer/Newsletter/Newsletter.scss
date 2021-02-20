@@ -1,0 +1,42 @@
+@import "../../../../scss/index.scss";
+
+.newsletter {
+  position: relative;
+  padding-left: 50px;
+
+  .anticon {
+    color: rgba(0, 0, 0, 0.25);
+    padding-right: 10px;
+  }
+
+  h3 {
+    color: $font-light;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 50px;
+  }
+
+  input {
+    height: 30px;
+    font-size: 15px;
+  }
+
+  button {
+    width: 90%;
+    height: 35px;
+    background-color: $primary-color-input;
+    color: $font-light;
+    border: $background-dark;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color-input;
+      color: $font-light;
+      border: 0;
+    }
+  }
+}
+
+.ant-input-affix-wrapper {
+  width: 90%;
+}

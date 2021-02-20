@@ -14,6 +14,8 @@ export default function MenuTop(props) {
   const { menuCollapsed, setMenuCollapsed } = props;
 
   const logoutUser = () => {
+    localStorage.setItem("user", "");
+    localStorage.setItem("isLogin", "");
     window.location.href = "/admin/login";
   };
 

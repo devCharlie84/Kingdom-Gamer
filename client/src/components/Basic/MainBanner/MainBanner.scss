@@ -1,0 +1,51 @@
+@import "../../../scss/index.scss";
+
+.main-banner {
+  position: relative;
+  height: 500px;
+  background-image: url("../../../assets/img/jpg/home-v1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  .gradient-text {
+    background-color: #f3ec78;
+    // background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-image: linear-gradient(#a80707, #fdfdfd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .ant-row {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    h2 {
+      color: #fff;
+
+      border-color: red;
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    h3 {
+      color: #fff;
+      border-color: red;
+      font-size: 20px;
+    }
+  }
+}
