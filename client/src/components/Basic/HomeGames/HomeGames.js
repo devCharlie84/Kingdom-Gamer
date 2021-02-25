@@ -57,17 +57,20 @@ export default function HomeGames() {
               subtitle="The Elders Scrolls - Fallout - Divinity Original Sin "
             />
           </Col>
-          <Col md={12} className="home-games__more">
-            <Link to="./blog">
-              <Button>Ir al Blog de noticias</Button>
-            </Link>
-          </Col>
+          <Col md={12} />
           <Col md={6}>
             <CardGame
               image={Genre6}
               title="EA Sports games"
               subtitle="FIFA - NFL - UFC - NHL"
             />
+          </Col>
+        </Row>
+        <Row className="home-games__button">
+          <Col offset={6} md={12} className="home-games__more">
+            <Link to="./blog">
+              <Button>Ir al Blog de noticias</Button>
+            </Link>
           </Col>
         </Row>
       </Col>
