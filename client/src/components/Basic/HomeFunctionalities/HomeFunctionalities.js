@@ -11,11 +11,7 @@ export default function HomeFunctionalities() {
     <Row className="home-functionalities">
       <Col lg={4} />
       <Col lg={16} className="home-functionalities__title">
-        <h2>¿Qué es lo que hacemos?</h2>
-        <h3>
-          Somos una página de videojuegos donde publicamos posts de Noticias,
-          Blogs de interés para los amantes de los videojuegos.
-        </h3>
+        <h2 className="gradient-text">¿Qué es lo que hacemos?</h2>
       </Col>
       <Col lg={4} />
 

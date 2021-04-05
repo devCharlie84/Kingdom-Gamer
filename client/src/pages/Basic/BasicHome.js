@@ -9,8 +9,8 @@ export default function BasicHome() {
     <>
       <MainBanner />
       <HomeGames />
-      <HomeFunctionalities />
       <HomeRecommendedGames />
+      <HomeFunctionalities />
     </>
   );
 }

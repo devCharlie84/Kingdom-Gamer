@@ -1,0 +1,29 @@
+@import "../../../../scss/index.scss";
+
+.list-users {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &-switch {
+      display: flex;
+      align-items: center;
+
+      > button {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .users-active {
+    background-color: $background-light;
+    padding: 10px 20px;
+
+    .ant-list-item-meta {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

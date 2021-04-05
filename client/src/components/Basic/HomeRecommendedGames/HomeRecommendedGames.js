@@ -16,8 +16,9 @@ import "./HomeRecommendedGames.scss";
 
 export default function HomeRecommendedGames() {
   return (
-    <Row className="home-games">
-      <Col lg={24} className="home-games__title">
+    <Row className="home-recommended-games">
+      <Col lg={24} className="home-recommended-games__title">
+        {/* <hr style={{ border: "1px solid red" }}></hr> */}
         <h2 className="gradient-text">Juegos Recomendados</h2>
       </Col>
       <Col lg={4} />
@@ -101,11 +102,11 @@ function CardGame(props) {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <Card
-        className="home-games__card"
+        className="home-recommended-games__card"
         cover={<img src={image} alt={title} />}
       >
         <Meta title={title} description={subtitle}></Meta>
-        <div className="home-games__card__rate">
+        <div className="home-recommended-games__card__rate">
           <Rate disabled defaultValue={5} />
         </div>
       </Card>

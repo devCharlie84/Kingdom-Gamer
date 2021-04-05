@@ -16,15 +16,12 @@ React resources:
 - [Github](https://github.com/facebook/react/)
 
 
+
 Ant Desing resources:
 - [Documentation](https://ant.design)
 - [Components](https://ant.design/components/overview/)
 - [Resources](https://ant.design/docs/resources)
 - [Github](https://github.com/ant-design/ant-design/)
-
-
-Robot 3T
-- [Download](https://robomongo.org)
 
 
 Visual Studio Code:

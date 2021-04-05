@@ -3,7 +3,7 @@
 .main-banner {
   position: relative;
   height: 500px;
-  background-image: url("../../../assets/img/jpg/home-v1.jpg");
+  background-image: url("../../../assets/img/jpg/home-v6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,8 +14,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 0.5;
+    background-color: $background-dark;
+    opacity: 0.3;
   }
 
   .gradient-text {
@@ -40,7 +40,7 @@
       border-color: red;
       font-size: 50px;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.3;
     }
 
     h3 {

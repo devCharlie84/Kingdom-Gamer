@@ -13,11 +13,11 @@ export default function LayoutBasic(props) {
   return (
     <>
       <Row>
-        <Col lg={4} />
+        <Col lg={4} style={{ backgroundColor: "black" }} />
         <Col lg={16}>
           <MenuTop />
         </Col>
-        <Col lg={4} />
+        <Col lg={4} style={{ backgroundColor: "black" }} />
       </Row>
       <LoadRoutes routes={routes} />
       <Footer />

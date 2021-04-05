@@ -5,6 +5,8 @@ import LayoutBasic from "../layouts/LayoutBasic";
 // Admin Pages
 import AdminHome from "../pages/Admin/AdminHome";
 import AdminSignIn from "../pages/Admin/SignIn";
+import AdminUsers from "../pages/Admin/Users";
+import AdminEnlace from "../pages/Admin/Enlace";
 
 //Normal Pages
 import BasicHome from "../pages/Basic/BasicHome";
@@ -28,6 +30,16 @@ const routes = [
       {
         path: "/admin/login",
         component: AdminSignIn,
+        exact: true,
+      },
+      {
+        path: "/admin/users",
+        component: AdminUsers,
+        exact: true,
+      },
+      {
+        path: "/admin/enlaces",
+        component: AdminEnlace,
         exact: true,
       },
       {

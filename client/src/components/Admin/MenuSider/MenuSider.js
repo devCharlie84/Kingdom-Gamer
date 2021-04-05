@@ -36,7 +36,7 @@ function MenuSider(props) {
           </Link>
         </Menu.Item>
         <Menu.Item className="admin-sider__menu-item" key="/admin/menu">
-          <Link to={"/admin/menu"}>
+          <Link to={"/admin/enlaces"}>
             <TrophyOutlined />
             <span className="nav-text">Secciones</span>
           </Link>

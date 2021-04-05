@@ -1,50 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "antd/lib/form";
 import Button from "antd/lib/button";
+import notification from "antd/lib/notification";
 import Input from "antd/lib/input";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { signInApi } from "../../../api/user";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../../utils/constants";
 
 import "./LoginForm.scss";
 
 export default function LoginForm() {
-  // const [inputs, setInputs] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+  const [inputs, setInputs] = useState({
+    email: "",
+    password: "",
+  });
 
-  // const login = async (e) => {
-  //   if (
-  //     localStorage.getItem("email") === inputs.email &&
-  //     localStorage.getItem("password") === inputs.password
-  //   ) {
-  //     notification["success"]({
-  //       message: "Bienvenido",
-  //     });
-  //     localStorage.setItem("isLogin", true);
-  //     window.location.href = "/admin";
-  //   } else {
-  //     notification["error"]({
-  //       message: "Contraseña/Correo Electrónico incorrectos",
-  //     });
-  //   }
-  // };
+  const login = async (e) => {
+    const result = await signInApi(inputs);
 
-  // const changeForm = (e) => {
-  //   setInputs({ ...inputs, [e.target.name]: e.target.value });
-  // };
+    if (result.message) {
+      notification["error"]({
+        message: result.message,
+      });
+    } else {
+      const { accessToken, refreshToken } = result;
+      localStorage.setItem(ACCESS_TOKEN, accessToken);
+      localStorage.setItem(REFRESH_TOKEN, refreshToken);
+      // notification["success"]({
+      //   message: "Login Correcto",
+      // });
 
-  const loginUser = () => {
-    localStorage.setItem("user", "UserTest");
-    localStorage.setItem("isLogin", "true");
-    window.location.href = "/admin/";
+      window.location.href = "/admin";
+    }
+  };
+
+  const changeForm = (e) => {
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
   return (
-    <Form
-      className="login-form"
-      onFinish={loginUser}
-      // onChange={changeForm}
-    >
+    <Form className="login-form" onFinish={login} onChange={changeForm}>
       <Form.Item>
         <Input
           prefix={<UserOutlined style={{ color: "rgba(0,0,0,.35)" }} />}

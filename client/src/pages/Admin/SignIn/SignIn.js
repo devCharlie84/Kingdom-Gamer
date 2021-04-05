@@ -1,10 +1,11 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import Layout from "antd/lib/layout";
 import Tabs from "antd/lib/tabs";
+import { Redirect } from "react-router-dom";
 import Logo from "../../../assets/img/png/logo-kg.png";
-import RegisterForm from "../../../components/Admin/RegisterForm";
-import LoginForm from "../../../components/Admin/LoginForm";
+import RegisterForm from "./../../../components/Admin/RegisterForm";
+import LoginForm from "./../../../components/Admin/LoginForm";
+import { getAccessTokenApi } from "../../../api/auth";
 
 import "./SignIn.scss";
 
@@ -12,8 +13,8 @@ export default function SignIn() {
   const { Content } = Layout;
   const { TabPane } = Tabs;
 
-  if (localStorage.getItem("isLogin")) {
-    return <Redirect to="/admin" />;
+  if (getAccessTokenApi()) {
+    return <Redirect to="/admin"></Redirect>;
   }
 
   return (
