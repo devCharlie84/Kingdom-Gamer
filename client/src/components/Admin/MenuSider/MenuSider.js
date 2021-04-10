@@ -41,16 +41,16 @@ function MenuSider(props) {
             <span className="nav-text">Secciones</span>
           </Link>
         </Menu.Item>
-        <Menu.Item className="admin-sider__menu-item" key="/admin/pokemon">
-          <Link to={"/admin/pokemon"}>
-            <CrownOutlined />
-            <span className="nav-text">Pokemon</span>
-          </Link>
-        </Menu.Item>
         <Menu.Item className="admin-sider__menu-item" key="/admin/blog">
           <Link to={"/admin/blog"}>
             <BookOutlined />
             <span className="nav-text">Blog</span>
+          </Link>
+        </Menu.Item>
+        <Menu.Item className="admin-sider__menu-item" key="/admin/pokemon">
+          <Link to={"/admin/pokemon"}>
+            <CrownOutlined />
+            <span className="nav-text">Pokemon</span>
           </Link>
         </Menu.Item>
       </Menu>

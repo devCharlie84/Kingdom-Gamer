@@ -7,10 +7,11 @@ import AdminHome from "../pages/Admin/AdminHome";
 import AdminSignIn from "../pages/Admin/SignIn";
 import AdminUsers from "../pages/Admin/Users";
 import AdminEnlace from "../pages/Admin/Enlace";
+import AdminBlog from "../pages/Admin/Blog";
 
 //Normal Pages
 import BasicHome from "../pages/Basic/BasicHome";
-import Contact from "../pages/Basic/Contact";
+import Blog from "../pages/Basic/Blog";
 
 //Other
 import Error404Admin from "../pages/Admin/Error404";
@@ -43,6 +44,11 @@ const routes = [
         exact: true,
       },
       {
+        path: "/admin/blog",
+        component: AdminBlog,
+        exact: true,
+      },
+      {
         component: Error404Admin,
       },
     ],
@@ -58,8 +64,13 @@ const routes = [
         exact: true,
       },
       {
-        path: "/contact",
-        component: Contact,
+        path: "/blog",
+        component: Blog,
+        exact: true,
+      },
+      {
+        path: "/blog/:url",
+        component: Blog,
         exact: true,
       },
       {

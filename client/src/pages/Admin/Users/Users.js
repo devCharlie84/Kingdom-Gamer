@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { getAccessTokenApi } from "../../../api/auth";
 import { getUsersActiveApi } from "../../../api/user";
 import ListUsers from "../../../components/Admin/Users/ListUsers";
@@ -21,12 +22,17 @@ export default function Users() {
   }, [token, reloadUsers]);
 
   return (
-    <div>
-      <ListUsers
-        usersActive={usersActive}
-        usersInactive={usersInactive}
-        setReloadUsers={setReloadUsers}
-      />
-    </div>
+    <>
+      <Helmet>
+        <title> Usuarios | Kingdom Gamer</title>
+      </Helmet>
+      <div>
+        <ListUsers
+          usersActive={usersActive}
+          usersInactive={usersInactive}
+          setReloadUsers={setReloadUsers}
+        />
+      </div>
+    </>
   );
 }

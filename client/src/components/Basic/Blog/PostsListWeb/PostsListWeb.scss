@@ -1,0 +1,55 @@
+@import "../../../../scss/index.scss";
+
+.posts-list-web {
+  margin: 50px 0;
+
+  a {
+    text-align: center;
+    color: $font-dark;
+  }
+
+  .ant-pagination-item-active:focus a,
+  .ant-pagination-item-active:hover a {
+    color: $primary-color;
+  }
+
+  .ant-pagination-item a {
+    color: $font-dark;
+  }
+
+  h1 {
+    text-align: center;
+    color: $font-dark;
+    text-transform: uppercase;
+    margin: 50px 0;
+  }
+
+  .post {
+    color: $font-light;
+
+    &__date {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: $primary-color;
+      margin-right: 20px;
+      border-radius: 5px;
+      text-transform: capitalize;
+      padding: 5px 25px;
+    }
+
+    .ant-list-item-meta-title {
+      color: $font-dark;
+      font-size: 20px;
+      &:hover {
+        color: $primary-color-dark;
+      }
+      &:focus {
+        color: $primary-color-dark;
+      }
+    }
+  }
+  .ant-list-item {
+    border-bottom: 1px solid $primary-color-input;
+  }
+}

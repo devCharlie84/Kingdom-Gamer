@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Card from "antd/lib/card";
@@ -67,9 +68,19 @@ function CardInfo(props) {
   const { Meta } = Card;
 
   return (
-    <Card className="home-functionalities__cardHome">
-      <InfoCircleOutlined />
-      <Meta title={title} description={description} />
-    </Card>
+    <>
+      <Helmet>
+        <title> Admin Home | Kindom Gamer</title>
+        <meta
+          name="description"
+          content="Admin Home | Kingdom Gamer"
+          data-react-helmet="true"
+        />
+      </Helmet>
+      <Card className="home-functionalities__cardHome">
+        <InfoCircleOutlined />
+        <Meta title={title} description={description} />
+      </Card>
+    </>
   );
 }

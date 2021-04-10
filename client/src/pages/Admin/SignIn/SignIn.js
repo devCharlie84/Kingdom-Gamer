@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "antd/lib/layout";
 import Tabs from "antd/lib/tabs";
 import { Redirect } from "react-router-dom";
@@ -18,22 +19,32 @@ export default function SignIn() {
   }
 
   return (
-    <Layout className="sign-in">
-      <Content className="sign-in__content">
-        <h1 className="sign-in__content-logo">
-          <img src={Logo} alt="Kingdom Gamer" />
-        </h1>
-        <div className="sign-in__content-tabs">
-          <Tabs type="card">
-            <TabPane tab={"Iniciar Sesión"} key="1">
-              <LoginForm />
-            </TabPane>
-            <TabPane tab={"Registrarse"} key="2">
-              <RegisterForm />
-            </TabPane>
-          </Tabs>
-        </div>
-      </Content>
-    </Layout>
+    <>
+      <Helmet>
+        <title> Iniciar Sesión | Kindom Gamer</title>
+        <meta
+          name="description"
+          content="Iniciar Sesión | Kingdom Gamer"
+          data-react-helmet="true"
+        />
+      </Helmet>
+      <Layout className="sign-in">
+        <Content className="sign-in__content">
+          <h1 className="sign-in__content-logo">
+            <img src={Logo} alt="Kingdom Gamer" />
+          </h1>
+          <div className="sign-in__content-tabs">
+            <Tabs type="card">
+              <TabPane tab={"Iniciar Sesión"} key="1">
+                <LoginForm />
+              </TabPane>
+              <TabPane tab={"Registrarse"} key="2">
+                <RegisterForm />
+              </TabPane>
+            </Tabs>
+          </div>
+        </Content>
+      </Layout>
+    </>
   );
 }
