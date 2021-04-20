@@ -38,7 +38,6 @@ export default function AddUserForm(props) {
 
       signUpAdminApi(token, userData)
         .then((response) => {
-          console.log(userData);
           notification["success"]({
             message: response.message,
           });

@@ -1,7 +1,9 @@
 @import "../../../scss/index.scss";
 
 .menu-top-web {
-  position: sticky;
+  position: relative;
+  // z-index: -1;
+  // position: sticky;
   top: 0;
   background-color: $background-dark;
   border: 0;

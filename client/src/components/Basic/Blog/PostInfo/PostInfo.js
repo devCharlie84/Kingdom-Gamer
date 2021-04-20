@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Spin from "antd/lib/spin";
+// import { PacmanLoader } from "react-spinners";
 import notification from "antd/lib/notification";
 import moment from "moment";
 import "moment/locale/es";
@@ -34,6 +35,7 @@ export default function PostInfo(props) {
   if (!postInfo) {
     return (
       <Spin tip="Cargando" style={{ width: "100%", padding: "200px 0" }} />
+      // <PacmanLoader className="UserItem-PacMan" color="#FFF" loading={true} />
     );
   }
 

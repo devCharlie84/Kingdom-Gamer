@@ -24,7 +24,7 @@ function Blog(props) {
   const { page = 1 } = queryString.parse(location.search);
 
   useEffect(() => {
-    getPostsApi(8, page)
+    getPostsApi(7, page)
       .then((response) => {
         if (response?.code !== 200) {
           notification["warning"]({

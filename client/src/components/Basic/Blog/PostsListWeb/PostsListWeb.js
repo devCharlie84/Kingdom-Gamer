@@ -6,6 +6,7 @@ import moment from "moment";
 import "moment/locale/es";
 import List from "antd/es/list";
 import Spin from "antd/lib/spin";
+// import { PacmanLoader } from "react-spinners";
 import notification from "antd/lib/notification";
 
 import Pagination from "../../../Pagination";
@@ -42,12 +43,12 @@ export default function PostsListWeb(props) {
         tip="Cargando Noticias"
         style={{ width: "100%", padding: "200px 0" }}
       />
+      // <PacmanLoader className="UserItem-PacMan" color="#FFF" loading={true} />
     );
   }
 
   return (
     <div className="posts-list-web">
-      <h1>Blog</h1>
       <List
         dataSource={posts.docs}
         renderItem={(post) => <Post post={post} />}
@@ -68,18 +69,14 @@ function Post(props) {
       <Helmet>
         <title> Blog | Kindom Gamer</title>
       </Helmet>
-      <List.Item className="post">
-        <div className="post__date">
-          <span>
-            {day} {month}
-          </span>
-          <span>{year}</span>
-        </div>
-        {console.log(post.url)}
 
+      <List.Item className="post">
         <List.Item.Meta
           title={<Link to={`blog/${post.url}`}> {post.title} </Link>}
         />
+        <div className="post__date">
+          {day} {month} {year}
+        </div>
       </List.Item>
     </>
   );

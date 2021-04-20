@@ -30,15 +30,17 @@
     &__date {
       display: flex;
       align-items: center;
-      flex-direction: column;
+      flex-direction: row;
       background-color: $primary-color;
       margin-right: 20px;
       border-radius: 5px;
       text-transform: capitalize;
-      padding: 5px 25px;
+      padding: 5px 15px;
     }
 
     .ant-list-item-meta-title {
+      display: flex;
+      align-items: center;
       color: $font-dark;
       font-size: 20px;
       &:hover {

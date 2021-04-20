@@ -8,10 +8,12 @@ import AdminSignIn from "../pages/Admin/SignIn";
 import AdminUsers from "../pages/Admin/Users";
 import AdminEnlace from "../pages/Admin/Enlace";
 import AdminBlog from "../pages/Admin/Blog";
+import AdminPokemon from "../pages/Admin/Pokemon";
 
 //Normal Pages
 import BasicHome from "../pages/Basic/BasicHome";
 import Blog from "../pages/Basic/Blog";
+import Pokemon from "../pages/Basic/Pokemon";
 
 //Other
 import Error404Admin from "../pages/Admin/Error404";
@@ -49,6 +51,11 @@ const routes = [
         exact: true,
       },
       {
+        path: "/admin/pokemon",
+        component: AdminPokemon,
+        exact: true,
+      },
+      {
         component: Error404Admin,
       },
     ],
@@ -71,6 +78,11 @@ const routes = [
       {
         path: "/blog/:url",
         component: Blog,
+        exact: true,
+      },
+      {
+        path: "/pokemon",
+        component: Pokemon,
         exact: true,
       },
       {
