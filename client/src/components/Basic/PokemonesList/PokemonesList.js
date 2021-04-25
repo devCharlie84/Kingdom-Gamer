@@ -95,7 +95,7 @@ function Pokemon(props) {
         <a href={urlPokemon} target="_blank" rel="noopener noreferrer">
           <Card cover={<img src={pokemonSprite} alt={pokemonInfo.name} />}>
             <span style={{ color: "#000", fontSize: "16px" }}>
-              {`N.º${pokemon.idPokemon}`}
+              {`N.º${pokemonInfo.id}`}
             </span>
             <Meta
               title={pokemonInfo.name}

@@ -168,12 +168,12 @@ function Pokemon(props) {
       <img
         src={pokemonData.sprites.front_default}
         alt={pokemonData.name}
-        style={{ width: "100px", marginRight: "20px" }}
+        style={{ width: "55px", marginRight: "20px" }}
       />
 
       <List.Item.Meta
         title={`${pokemonData.name} | N.º ${pokemonData.id}`}
-        description={pokemonData.name}
+        description={pokemonData.types[0].type.name}
       />
     </List.Item>
   );

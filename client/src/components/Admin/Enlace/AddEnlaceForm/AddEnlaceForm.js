@@ -70,6 +70,7 @@ function AddForm(props) {
     >
       <Option value="http://">http://</Option>
       <Option value="https://">https://</Option>
+      <Option value="/">/</Option>
     </Select>
   );
 
