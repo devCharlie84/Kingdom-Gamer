@@ -4,6 +4,7 @@ import MainBanner from "../../components/Basic/MainBanner";
 import HomeGames from "../../components/Basic/HomeGames";
 import HomeFunctionalities from "../../components/Basic/HomeFunctionalities";
 import HomeRecommendedGames from "../../components/Basic/HomeRecommendedGames";
+import HomePokemon from "../../components/Basic/HomePokemon";
 
 export default function BasicHome() {
   return (
@@ -18,6 +19,8 @@ export default function BasicHome() {
       </Helmet>
       <MainBanner />
       <HomeGames />
+      <hr></hr>
+      <HomePokemon />
       <HomeRecommendedGames />
       <HomeFunctionalities />
     </>

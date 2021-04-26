@@ -4,7 +4,12 @@
   &__pokemon {
     margin-top: 25px;
     margin-bottom: 25px;
-
+    .ant-btn {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      margin: 8% 0 0 8%;
+    }
     .ant-card {
       min-height: 100%;
       width: 90%;

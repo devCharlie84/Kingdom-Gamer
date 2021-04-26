@@ -87,7 +87,7 @@ function Pokemon(props) {
     setUrlPokemon(baseUrl);
   };
 
-  function cualquier() {
+  function renderPokemon() {
     if (pokemonWeight === null) {
       return null;
     } else {
@@ -120,8 +120,8 @@ function Pokemon(props) {
               Versión Shiny:{" "}
               <img src={pokemonSpriteShiny} alt={pokemonInfo.name} />
             </span>
-
             <Button>Ver información del Pokemon</Button>
+
             <div className="pokemones-list__pokemon-footer"></div>
           </Card>
         </a>
@@ -130,7 +130,7 @@ function Pokemon(props) {
   }
 
   return (
-    <>{cualquier()}</>
+    <>{renderPokemon()}</>
     // <a href={urlPokemon} target="_blank" rel="noopener noreferrer">
     //   <Card cover={<img src={pokemonSprite} alt={pokemonInfo.name} />}>
     //     <span style={{ color: "#000", fontSize: "16px" }}>

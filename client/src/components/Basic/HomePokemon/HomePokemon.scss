@@ -1,6 +1,6 @@
 @import "../../../scss/index.scss";
 
-.home-games {
+.home-pokemon {
   margin-top: 50px;
   margin-bottom: 50px;
 
@@ -15,7 +15,7 @@
     }
   }
 
-  .row-games {
+  .row-pokemon {
     .ant-col {
       padding: 15px !important;
     }
@@ -60,11 +60,11 @@
   &__more {
     text-align: center;
     padding-top: 15px;
+    margin-left: 90px;
     button {
-      margin-top: 100px;
-      background-color: $primary-color;
+      background-color: $primary-color-input;
       border: 1px solid black;
-      color: $font-light;
+      color: $font-dark;
       width: 250px;
       height: 50px;
       font-weight: bold;
@@ -72,8 +72,8 @@
       text-transform: uppercase;
 
       &:hover {
-        background-color: $primary-color-input;
-        color: $font-dark;
+        background-color: $primary-color;
+        color: $font-light;
       }
     }
   }

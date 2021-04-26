@@ -17,7 +17,9 @@ export default function HomeGames() {
   return (
     <Row className="home-games">
       <Col lg={24} className="home-games__title">
-        <h2 className="gradient-text">Lo último en Noticias</h2>
+        <h2 className="gradient-text">
+          ¡Lo último en Noticias y Accede a la Pokedex!
+        </h2>
       </Col>
       <Col lg={4} />
       <Col lg={16}>
