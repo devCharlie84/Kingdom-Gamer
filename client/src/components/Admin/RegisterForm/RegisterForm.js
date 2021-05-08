@@ -16,7 +16,11 @@ import {
   passwordValidation,
 } from "../../../utils/formValidation";
 
-import { signUpApi } from "../../../api/user";
+import {
+  signUpApi,
+  getUsersFirstTimeApi,
+  signUpSuperAdmin,
+} from "../../../api/user";
 
 import "./RegisterForm.scss";
 
@@ -90,16 +94,29 @@ export default function RegisterForm() {
         });
       } else {
         if (name & lastname & email & password & repeatPassword) {
-          const result = await signUpApi(inputs);
-          if (!result.isSuccess) {
-            notification["error"]({
-              message: result.message,
-            });
-          } else {
+          // Solo para el Super Admin (Primer Admin de la página web)
+          const resultado = await getUsersFirstTimeApi();
+
+          if (resultado.users.length < 1) {
+            const result = await signUpSuperAdmin(inputs);
+
             notification["success"]({
               message: result.message,
             });
+
             resetForm();
+          } else {
+            const result = await signUpApi(inputs);
+            if (!result.isSuccess) {
+              notification["error"]({
+                message: result.message,
+              });
+            } else {
+              notification["success"]({
+                message: result.message,
+              });
+              resetForm();
+            }
           }
         } else {
           notification["error"]({

@@ -63,7 +63,7 @@ function Pokemon(props) {
       getPokemonDataPokeApiName(pokemon.idPokemon)
         .then((response) => {
           if (response?.code !== 200) {
-            notification["warning"]({ message: response.message });
+            // notification["warning"]({ message: response });
           } else {
             setPokemonInfo(response.data);
             setPokemonSprite(response.data.sprites.front_default);

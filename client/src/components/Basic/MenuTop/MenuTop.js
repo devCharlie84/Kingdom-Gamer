@@ -3,6 +3,7 @@ import Menu from "antd/lib/menu";
 import { Link } from "react-router-dom";
 import { getEnlaceApi } from "../../../api/enlace";
 import Logo from "../../../assets/img/png/logo-kg.png";
+import { CrownOutlined } from "@ant-design/icons";
 
 import "./MenuTop.scss";
 
@@ -47,6 +48,11 @@ export default function MenuTop() {
           );
         }
       })}
+      <Link to={"/admin"}>
+        <button className="menu-top-web__button">
+          <CrownOutlined /> Administrador
+        </button>
+      </Link>
     </Menu>
   );
 }

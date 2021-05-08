@@ -24,8 +24,8 @@ export default function LoginForm() {
       });
     } else {
       const { accessToken, refreshToken } = result;
-      localStorage.setItem(ACCESS_TOKEN, accessToken);
-      localStorage.setItem(REFRESH_TOKEN, refreshToken);
+      sessionStorage.setItem(ACCESS_TOKEN, accessToken);
+      sessionStorage.setItem(REFRESH_TOKEN, refreshToken);
       // notification["success"]({
       //   message: "Login Correcto",
       // });

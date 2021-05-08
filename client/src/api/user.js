@@ -78,6 +78,26 @@ export function getUsersApi(token) {
     });
 }
 
+export function getUsersFirstTimeApi() {
+  const url = `${BASE_PATH}/${API_VERSION}/users-first-time`;
+  const params = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      return result;
+    })
+    .catch((error) => {
+      return error.message;
+    });
+}
+
 export function getUsersActiveApi(token, status) {
   const url = `${BASE_PATH}/${API_VERSION}/users-active?active=${status}`;
   const params = {
@@ -212,6 +232,27 @@ export function signUpAdminApi(token, data) {
     headers: {
       "Content-Type": "application/json",
       Authorization: token,
+    },
+  };
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      return result;
+    })
+    .catch((error) => {
+      return error.message;
+    });
+}
+
+export function signUpSuperAdmin(data) {
+  const url = `${BASE_PATH}/${API_VERSION}/sign-up-super-admin`;
+  const params = {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
     },
   };
   return fetch(url, params)

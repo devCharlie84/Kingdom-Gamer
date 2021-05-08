@@ -32,6 +32,21 @@
       padding: 15px 10px 5px 0px;
     }
   }
+
+  &__button {
+    background-color: $background-dark;
+    border: 1px solid red;
+    color: $background-light;
+    .anticon {
+      color: $primary-color;
+    }
+
+    &:hover,
+    focus,
+    active {
+      background-color: $border-dark-light;
+    }
+  }
 }
 
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
