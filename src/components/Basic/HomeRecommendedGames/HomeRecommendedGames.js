@@ -21,8 +21,8 @@ export default function HomeRecommendedGames() {
         {/* <hr style={{ border: "1px solid red" }}></hr> */}
         <h2 className="gradient-text">Juegos Recomendados</h2>
       </Col>
-      <Col lg={4} />
-      <Col lg={16}>
+      <Col lg={2} />
+      <Col lg={20}>
         <Row className="row-games">
           <Col md={6}>
             <CardGame
@@ -90,7 +90,7 @@ export default function HomeRecommendedGames() {
           </Col>
         </Row>
       </Col>
-      <Col lg={4} />
+      <Col lg={2} />
     </Row>
   );
 }

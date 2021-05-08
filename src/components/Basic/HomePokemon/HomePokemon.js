@@ -16,8 +16,8 @@ import "./HomePokemon.scss";
 export default function HomePokemon() {
   return (
     <Row className="home-pokemon">
-      <Col lg={4} />
-      <Col lg={16}>
+      <Col lg={2} />
+      <Col lg={20}>
         <Row className="row-pokemon">
           <Col md={6}>
             <CardGame
@@ -26,13 +26,13 @@ export default function HomePokemon() {
               subtitle="Tipo: Dragón"
             />
           </Col>
-          <Col md={12}>
-            <Col offset={6} md={12} className="home-pokemon__more">
-              <Link to="./pokemon">
-                <Button>Ir a la Pokedex</Button>
-              </Link>
-            </Col>
+
+          <Col md={12} className="home-pokemon__more">
+            <Link to="./pokemon">
+              <Button>Ir a la Pokedex</Button>
+            </Link>
           </Col>
+
           <Col md={6}>
             <CardGame
               image={Pseudolegendario2}
@@ -40,6 +40,7 @@ export default function HomePokemon() {
               subtitle="Tipo: Dragón"
             />
           </Col>
+
           <Col md={6}>
             <CardGame
               image={Pseudolegendario3}
@@ -70,7 +71,7 @@ export default function HomePokemon() {
           </Col>
         </Row>
       </Col>
-      <Col lg={4} />
+      <Col lg={2} />
     </Row>
   );
 }

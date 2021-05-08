@@ -21,8 +21,8 @@ export default function HomeGames() {
           ¡Lo último en Noticias y Accede a la Pokedex!
         </h2>
       </Col>
-      <Col lg={4} />
-      <Col lg={16}>
+      <Col lg={2} />
+      <Col lg={20}>
         <Row className="row-games">
           <Col md={6}>
             <CardGame
@@ -76,7 +76,7 @@ export default function HomeGames() {
           </Col>
         </Row>
       </Col>
-      <Col lg={4} />
+      <Col lg={2} />
     </Row>
   );
 }
