@@ -30,12 +30,8 @@ export default function LoginForm() {
       //   message: "Login Correcto",
       // });
 
-      // netlify
       window.location.href = "/#/admin";
       window.location.reload();
-
-      //AWS S3
-      // window.location.href = "/admin";
     }
   };
 
